@@ -1,0 +1,5 @@
+{
+  "name": "Copy of UK Driving Test (DL25)",
+  "description": "A digital simulation of the UK DL25 Driving Test Report form. Compatible with iPad and iPhone, featuring a timer, fault tracking, and automatic pass/fail calculation based on DVSA standards.",
+  "requestFramePermissions": []
+}
