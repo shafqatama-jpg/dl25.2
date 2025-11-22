@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { LEFT_COLUMN_DATA, MIDDLE_COLUMN_DATA, RIGHT_COLUMN_DATA, ALL_GROUPS } from './constants';
 import { FaultState, TestData, TestStatus, ManoeuvreState, EtaState, EcoState, CandidateDetails } from './types';
-import CompetencyRow from './components/CompetencyRow';
+import CompetencyItem from './components/CompetencyItem';
 import TestTimer from './components/TestTimer';
-import TestResultModal from './components/TestResultModal';
+import TestOutcomeModal from './components/TestOutcomeModal';
 import { Car, Play, Square, FileCheck } from 'lucide-react';
 
 export default function App() {
@@ -97,7 +96,7 @@ export default function App() {
 
           <div className="divide-y divide-gray-300">
             {group.items.map(item => (
-              <CompetencyRow
+              <CompetencyItem
                 key={item.id}
                 id={item.id}
                 name={item.name}
@@ -288,7 +287,7 @@ export default function App() {
 
       {/* Results Modal */}
       {showResult && (
-        <TestResultModal 
+        <TestOutcomeModal 
           data={testData} 
           onClose={() => setShowResult(false)}
           onRestart={handleStart}
