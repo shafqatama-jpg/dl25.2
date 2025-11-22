@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { LEFT_COLUMN_DATA, MIDDLE_COLUMN_DATA, RIGHT_COLUMN_DATA, ALL_GROUPS } from './constants';
 import { FaultState, TestData, TestStatus, ManoeuvreState, EtaState, EcoState, CandidateDetails } from './types';
 import CompetencyRow from './components/CompetencyRow';
-import Timer from './components/Timer';
+import TestTimer from './components/TestTimer';
 import TestResultModal from './components/TestResultModal';
 import { Car, Play, Square, FileCheck } from 'lucide-react';
 
@@ -141,7 +141,7 @@ export default function App() {
         </div>
         
         <div className="flex items-center space-x-3">
-          <Timer isRunning={status === TestStatus.RUNNING} />
+          <TestTimer isRunning={status === TestStatus.RUNNING} />
           
           {status === TestStatus.IDLE ? (
             <button onClick={handleStart} className="bg-green-600 hover:bg-green-500 text-white px-4 py-1 rounded font-bold text-sm flex items-center">
